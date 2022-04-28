@@ -10,6 +10,7 @@ const celulas =  [
        evolution_second: 'Charmilion',
        evolution_third: 'Charizard',
     },
+},
 
     {
         Pokemon: 'Squirtle',
@@ -22,6 +23,7 @@ const celulas =  [
        evolution_second: 'Wartortle',
        evolution_third: 'Blastoise',
     },
+},
 
     {
         Pokemon: 'Bulbasaur',
@@ -33,4 +35,7 @@ const celulas =  [
        evolution: {
        evolution_second: 'Ivysaur',
        evolution_third: 'Venusaur',
-    }
+       },
+    },
+
+    
