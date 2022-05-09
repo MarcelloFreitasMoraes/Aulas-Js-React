@@ -1,22 +1,22 @@
 import React from "react";
+import * as S from './styles'
+import '../../App.css'
 
 export const Banner = () => {
 
     return (
         <>
-        <ul>
-          <li>
-            <a href='http://localhost:3000/lojas?loja=mercadolivre&cor=amarelo&estado=sp'>
+          <S.Menu>
+            <S.Lista href='http://localhost:3000/lojas?loja=mercadolivre&cor=amarelo&estado=sp'>
               Split
-            </a>
-          </li>
-          <li>
-            <a href='http://localhost:3000/cidades?cidade=paris&pais=franca&continente=europeu&turismo=torre-eiffel&time=psg'>Query String</a>
-          </li>
-          <li>
-            <a href='/'>Home</a>
-          </li>
-        </ul>
+            </S.Lista>
+          
+            <S.Lista href='http://localhost:3000/cidades?cidade=paris&pais=franca&continente=europeu&turismo=torre-eiffel&time=psg'>Query String</S.Lista>
+          
+            <S.Lista href='/'>Home</S.Lista>
+            </S.Menu>
+        
         </>
+        
     )
 }

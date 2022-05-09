@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Banner } from "../../components/Banner";
+import * as S from './styles'
 
 export default function Lojas() {
 
@@ -40,34 +41,40 @@ export default function Lojas() {
         else {
             setLoja(<p>Não existe</p>)
         }
-    },[])
+    }, [])
 
     useEffect(() => {
         if (splitCor === 'amarelo') {
             setCor(
+                <S.Yellow>
                 <p className='amarelo'>
                     Amarelo
                 </p>
+                </S.Yellow>
             )
         }
         else if (splitCor === 'vermelho') {
             setCor(
+                <S.Red>
                 <p className='vermelho'>
                     Vermelho
                 </p>
+                </S.Red>
             )
         }
         else if (splitCor === 'azul') {
             setCor(
+                <S.Blue>
                 <p className='azul'>
                     Azul
                 </p>
+                </S.Blue>
             )
         }
         else {
             setCor(<p>Não existe</p>)
         }
-    },[])
+    }, [])
 
     useEffect(() => {
         if (splitEstado === 'sp') {
@@ -94,14 +101,16 @@ export default function Lojas() {
         else {
             setEstado(<p>Não existe</p>)
         }
-    },[])
+    }, [])
 
     return (
         <>
-        <Banner />
-            {loja}
-            {cor}
-            {estado}
+            <Banner />
+            <S.Box>
+                {loja}
+                {cor}
+                {estado}
+            </S.Box>
         </>
     )
 }

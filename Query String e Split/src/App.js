@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Lojas from '../src/pages/lojas'
 import Cidades from '../src/pages/cidades'
 import React from 'react';
+import './App.css'
 
 export default function App() {
   return (
