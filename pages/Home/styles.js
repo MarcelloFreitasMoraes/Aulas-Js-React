@@ -8,20 +8,25 @@ export const Container = styled.div`
   text-align: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   display: flex;
-  height: auto;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: flex-start;
+align-items: center;
+flex-direction: column;
 `;
 
 export const Title = styled.h2`
-  width: 100%;
+  width: 30%;
   text-align: center;
   margin-bottom: 15px;
-`;
+  border-radius: 15px;
+  padding: 20px 20px;
+  border-radius: 8px;
+  border-style: dashed;
+  `;
 
 export const Status = styled.p`
   margin: 2rem;
-  color: red;
+  color: blue;
   text-transform: uppercase;
+  border-radius: 8px;
+  padding: 20px 20px;
+  border-style: dashed;
 `
