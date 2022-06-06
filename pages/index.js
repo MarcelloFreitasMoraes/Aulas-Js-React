@@ -56,15 +56,14 @@ function Aula() {
         <>
             <h2>Lista de Roupas</h2>
             {resposta && Object.entries(resposta.femininas).map(roupa => {
-                console.log(roupa, 'roupa')
+                
                 return (
                     <div className="box">
                         {roupa[1].tipo}
                         <input onChange={(e) => setEditando(e.target.value)} />
                         <button onClick={() => deletar(roupa[0])}>Excluir</button>
                         <button onClick={() => editar(roupa[0])}>Editar</button>
-                        {/* <p>{roupa.valor}</p>
-                    <p>{roupa.cor}</p> */}
+                       
                     </div>
                 )
             })}
