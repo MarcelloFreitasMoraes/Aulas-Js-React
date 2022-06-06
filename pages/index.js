@@ -12,7 +12,7 @@ function Aula() {
 
 
     useEffect(() => {
-        fetch('https://teste-aula-metodos-3b964-default-rtdb.firebaseio.com/roupas.json')
+        fetch('https://clothing-store2022-default-rtdb.firebaseio.com/roupa.json')
             .then(response => response.json())
             .then(data => setResposta(data))
     }, [mapas]);
@@ -56,27 +56,26 @@ function Aula() {
         <>
         <S.Container>
             <h2>Lista de Roupas</h2>
-            {resposta && Object.values(resposta.roupa).map(roupa => {
+            {resposta && Object.entries(resposta).map((roupa, index) => {
                 
                 return (
-                    <div className="box">
-                        {roupa.tipo}
-                        {/* {roupa.valor}
-                        {roupa.cor} */}
+                    <div key={index}>
+                       <p> {roupa[1].tipo}</p>
+                       <p>{roupa[1].valor}</p> 
+                       <p>{roupa[1].cor}</p>
                         <input onChange={(e) => setEditando(e.target.value)} />
                         <button onClick={() => deletar(roupa[0])}>Excluir</button>
                         <button onClick={() => editar(roupa[0])}>Editar</button>
-                       
                     </div>
                 )
             })}
             <h2>Cadastrar nova roupa</h2>
-            <form>
+            <S.Form>
                 <label>Tipo:</label><input onChange={(e) => setTipo(e.target.value)} /><br />
                 <label>Valor:</label><input onChange={(e) => setValor(e.target.value)} /><br />
                 <label>Cor:</label><input onChange={(e) => setCor(e.target.value)} /><br />
                 <button onClick={(e) => { e.preventDefault(); cadastro() }}>Cadastrar</button>
-            </form>
+            </S.Form>
             </S.Container>
         </>
     );
